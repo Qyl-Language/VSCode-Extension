@@ -1,0 +1,25 @@
+{
+    "name": "vscode-qyl",
+    "displayName": "vscode-qyl",
+    "description": "A syntax highlighter for the Quill language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "qyl",
+            "aliases": ["quill", "qyl"],
+            "extensions": [".qyl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "qyl",
+            "scopeName": "source.qyl",
+            "path": "./syntaxes/qyl.tmLanguage.json"
+        }]
+    }
+}

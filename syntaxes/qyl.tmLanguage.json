@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "quill",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.qyl",
+				"match": "\\b(if|else|import|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.qyl",
+			"begin": "\"",
+			"end": "\""
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.language",
+				"match": "\\b(py)\\b" 
+			}, {
+				"name": "variable.name",
+				"match": "([^ \t\n(){}\".,:\\]\\[]+(\\.[^ \t\n(){}\".,+\\]\\[]+)*): *([^ \t\n(){}\".,:\\]\\[]+(\\.[^ \t\n(){}\".,+\\]\\[]+)*)"
+			}]
+		}
+	},
+	"scopeName": "source.qyl"
+}
